@@ -1,4 +1,4 @@
-# Frontend .gitignore
+# Backend .gitignore
 
 # ========================================
 # Environment Variables (CRITICAL!)
@@ -8,6 +8,7 @@
 .env.*.local
 *.env
 !.env.example
+!.env.sample
 
 # ========================================
 # Dependencies
@@ -19,8 +20,6 @@ node_modules/
 # ========================================
 dist/
 build/
-dist-ssr/
-*.local
 
 # ========================================
 # Logs
@@ -29,38 +28,38 @@ logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
-
-# ========================================
-# Caching
-# ========================================
-.vite-inspect/
-vite.config.js.timestamp-*
-vite.config.ts.timestamp-*
 
 # ========================================
 # Testing
 # ========================================
 coverage/
 .nyc_output/
+.jest-cache/
 
 # ========================================
-# Editor directories and files
+# TypeScript
 # ========================================
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-*.swp
-*.swo
-*~
+*.tsbuildinfo
+
+# ========================================
+# Database
+# ========================================
+*.sqlite
+*.sqlite3
+*.db
+
+# ========================================
+# Redis
+# ========================================
+dump.rdb
+*.rdb
+
+# ========================================
+# Load Testing Results
+# ========================================
+load-tests/results/
+*.artillery.json
 
 # ========================================
 # Temporary Files

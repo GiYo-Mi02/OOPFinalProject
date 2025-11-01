@@ -1,0 +1,240 @@
+# Root .gitignore for UMakEBallot
+
+# ========================================
+# Environment Variables (CRITICAL!)
+# ========================================
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+.env.*
+
+# Keep example env files
+!.env.example
+!.env.sample
+
+# ========================================
+# Dependencies
+# ========================================
+node_modules/
+*/node_modules/
+jspm_packages/
+
+# ========================================
+# Build Outputs
+# ========================================
+dist/
+build/
+*/dist/
+*/build/
+dist-ssr/
+*.local
+
+# Backend specific
+backend/dist/
+backend/build/
+
+# Frontend specific
+frontend/dist/
+frontend/build/
+
+# ========================================
+# Logs
+# ========================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log.*
+
+# ========================================
+# Runtime data
+# ========================================
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# ========================================
+# Testing
+# ========================================
+coverage/
+*.lcov
+.nyc_output/
+.grunt
+lib-cov
+.jest-cache/
+
+# ========================================
+# Caching
+# ========================================
+.cache/
+.parcel-cache/
+.vscode-test/
+.turbo/
+.nuxt/
+.next/
+
+# ========================================
+# OS Files
+# ========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ========================================
+# IDE / Editor
+# ========================================
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# JetBrains IDEs
+.idea
+*.iml
+*.iws
+*.ipr
+
+# Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.njsproj
+*.sln
+*.sw?
+
+# ========================================
+# TypeScript
+# ========================================
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# ========================================
+# Database
+# ========================================
+*.sqlite
+*.sqlite3
+*.db
+
+# ========================================
+# Temporary Files
+# ========================================
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+
+# ========================================
+# Package Managers
+# ========================================
+.npm
+.eslintcache
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# ========================================
+# Production / Deployment
+# ========================================
+.serverless/
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# ========================================
+# Debug / Diagnostic
+# ========================================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ========================================
+# Load Testing Results
+# ========================================
+backend/load-tests/results/
+load-tests/results/
+*.artillery.json
+
+# ========================================
+# Uploads / User Generated Content
+# ========================================
+uploads/
+public/uploads/
+storage/
+
+# ========================================
+# Supabase (if local)
+# ========================================
+.supabase/
+
+# ========================================
+# Redis dumps
+# ========================================
+dump.rdb
+*.rdb
+
+# ========================================
+# SSL Certificates
+# ========================================
+*.pem
+*.key
+*.crt
+*.cert
+
+# ========================================
+# Docker (optional)
+# ========================================
+docker-compose.override.yml
+
+# ========================================
+# Local Development
+# ========================================
+.local/
+.vite-inspect/
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# ========================================
+# Miscellaneous
+# ========================================
+.lock-wscript
+*.code-workspace
+.history/
+
+# ========================================
+# Keep Important Files
+# ========================================
+!.gitkeep
+!.gitattributes
