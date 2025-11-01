@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.voteRoutes = void 0;
+const express_1 = require("express");
+const VoteController_1 = require("../controllers/VoteController");
+const authenticate_1 = require("../middleware/authenticate");
+const router = (0, express_1.Router)();
+exports.voteRoutes = router;
+const controller = new VoteController_1.VoteController();
+router.get("/leaderboard/:instituteId", controller.getLeaderboard);
+router.get("/elections/active", authenticate_1.authenticate, controller.getActiveElections);
+router.get("/elections/:electionId/candidates", controller.getElectionCandidates);
+router.post("/cast", authenticate_1.authenticate, controller.castVote);
+router.get("/check/:electionId", authenticate_1.authenticate, controller.checkVoteStatus);
