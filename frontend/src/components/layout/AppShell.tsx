@@ -129,7 +129,7 @@ export function AppShell() {
                   <img
                     src={LogoImg}
                     alt="UMak eBallot Logo"
-                    className="relative h-10 w-10 rounded-xl shadow-lg shadow-primary-500/50 object-cover"
+                    className="relative h-10 w-10 rounded-xl object-cover"
                   />
                 </div>
                 <div>
