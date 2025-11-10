@@ -1,9 +1,10 @@
 import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
-import { Moon, Sun, Vote, Mail, MapPin, Phone, Github, Twitter, Linkedin, Facebook } from "lucide-react";
+import { Moon, Sun, Mail, MapPin, Phone, Github, Twitter, Linkedin, Facebook } from "lucide-react";
 import { Button } from "../ui/Button";
 import { useAuth } from "../../contexts/AuthContext";
 import { useTheme } from "../../contexts/ThemeContext";
 import { clsx } from "clsx";
+import LogoImg from "../../assets/Logos.png";
 
 export function AppShell() {
   const { user, logout } = useAuth();
@@ -42,12 +43,11 @@ export function AppShell() {
             <Link to="/" className="flex items-center gap-3 transition-transform hover:scale-105">
               <div className="relative">
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 opacity-20 blur-xl"></div>
-                <span
-                  className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 shadow-lg shadow-primary-500/50"
-                  aria-hidden
-                >
-                  <Vote className="h-5 w-5 text-white" />
-                </span>
+                <img
+                  src={LogoImg}
+                  alt="UMak eBallot Logo"
+                  className="relative h-10 w-10 rounded-xl object-cover"
+                />
               </div>
               <div>
                 <p className="text-lg font-bold tracking-tight text-gray-900 dark:text-white">UMak eBallot</p>
@@ -126,12 +126,11 @@ export function AppShell() {
               <div className="flex items-center gap-3">
                 <div className="relative">
                   <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 opacity-20 blur-xl"></div>
-                  <span
-                    className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 shadow-lg shadow-primary-500/50"
-                    aria-hidden
-                  >
-                    <Vote className="h-5 w-5 text-white" />
-                  </span>
+                  <img
+                    src={LogoImg}
+                    alt="UMak eBallot Logo"
+                    className="relative h-10 w-10 rounded-xl shadow-lg shadow-primary-500/50 object-cover"
+                  />
                 </div>
                 <div>
                   <p className="text-lg font-bold tracking-tight text-gray-900 dark:text-white">UMak eBallot</p>
